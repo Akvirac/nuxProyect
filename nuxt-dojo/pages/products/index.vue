@@ -18,7 +18,7 @@ definePageMeta({
 //De esta forma lo que hacemos es, en una variable, almacenar toda la informacion que contiene la pagina en cuestion. para nosotros poder utilizarla.
 const { data: products } = await useFetch('https://fakestoreapi.com/products')
 
-//De esta forma lo que hacemos, es modificar el head, y su descripcion directamente desde la pagina, sobreescribiendo el header predefinido que creamos en nuxt.config.ts.
+//De esta forma lo que hacemos, es modificar el head(el cual es lo que vemos en la pestaña superior de el navegador.), y su descripcion directamente desde la pagina, sobreescribiendo el header predefinido que creamos en nuxt.config.ts.
 useHead({
 	title: 'Nuxt Dojo | Merch',
 	meta: [{ name: 'description', content: 'Nuxt 3 Merch' }],
