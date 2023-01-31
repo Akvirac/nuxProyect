@@ -1,0 +1,1 @@
+En esta carpeta lo que hacemos es crear nuestras diferentes paginas, desde donde llamamos componentes. Donde tiene la particularidad de que si, llamamos a una pagina de la misma forma en la que llamamos a una dentro de nuestra page, se va a mostrar esa misma.

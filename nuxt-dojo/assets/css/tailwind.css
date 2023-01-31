@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-gray-50;
+}
+/* Desde aca nosotros podemos crear nuestras clases para llamarlas directamente y no tener que hacer tanto codigo de clase en nuestro codigo central */
+@layer components {
+	.btn {
+		@apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm text-white;
+	}
+	.card {
+		@apply p-3 rounded-md bg-white shadow-md h-full;
+	}
+}
