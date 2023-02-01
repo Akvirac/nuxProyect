@@ -1,4 +1,5 @@
 <template>
+	<!-- Esta es otra forma de cambiar el header y titulo de la pagina, aparte desde el script y nuxt.config.ts -->
 	<Head>
 		<Title>Nuxt Dojo | {{ product.title }}</Title>
 		<Meta name="description" :content="product.description" />

@@ -12,8 +12,11 @@
 </template>
 
 <script setup>
-const { data } = await useFetch('/api/ninja?name=mario')
+const { data } = await useFetch('/api/ninja')
 </script>
+<!-- // method: 'post',
+// body: { age: 30 },
+// }) -->
 
 <style scoped>
 h2 {
