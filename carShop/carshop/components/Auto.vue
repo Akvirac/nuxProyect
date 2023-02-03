@@ -9,27 +9,28 @@ defineProps({
 
 <template>
 	<Contenedor>
-		<div v-for="(p, imageIndex) in auto.img">
-			<img :src="p" class="h-auto max-w-xs" :key="imageIndex" />
-		</div>
-
 		<div>
-			<span class="font-bold">Marca:</span>
-			<p>
-				{{ auto.marca }}
-			</p>
+			<img :src="auto.img" />
 		</div>
 		<div>
-			<span class="font-bold">Modelo:</span>
-			<p>
-				{{ auto.modelo }}
-			</p>
-		</div>
-		<div>
-			<span class="font-bold">Año:</span>
-			<p>
-				{{ auto.año }}
-			</p>
+			<div>
+				<span class="font-bold">Marca:</span>
+				<p>
+					{{ auto.marca }}
+				</p>
+			</div>
+			<div>
+				<span class="font-bold">Modelo:</span>
+				<p>
+					{{ auto.modelo }}
+				</p>
+			</div>
+			<div>
+				<span class="font-bold">Año:</span>
+				<p>
+					{{ auto.año }}
+				</p>
+			</div>
 		</div>
 
 		<div>

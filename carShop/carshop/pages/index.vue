@@ -1,4 +1,4 @@
 <script setup>
-navigateTo('/catalogo')
+navigateTo('/login')
 </script>
-<template></template>
+<template><h2></h2></template>
