@@ -12,6 +12,10 @@ defineProps({
 		type: Boolean,
 		default: false,
 	},
+	modelValue: {
+		type: String,
+		required: true,
+	},
 })
 </script>
 
@@ -19,8 +23,13 @@ defineProps({
 	<div class="flex flex-col items-center">
 		<label class="underline">{{ text }}</label>
 		<div class="flex justify-center">
-			<input :type="type" />
-			<button v-if="action" class="text-xs" @click="$emit('action')">
+			<input
+				:type="type"
+				class="border border-emerald-500"
+				:modelValue="modelValue"
+				@input="$emit('update:modelValue', $event.target.value)"
+			/>
+			<button v-if="action" class="text-xs ml-1" @click="$emit('action')">
 				<i class="material-icons"> visibility_off</i>
 			</button>
 		</div>
