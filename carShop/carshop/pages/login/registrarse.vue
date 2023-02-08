@@ -3,4 +3,6 @@ definePageMeta({
 	layout: 'login',
 })
 </script>
-<template></template>
+<template>
+	<h2>hola</h2>
+</template>

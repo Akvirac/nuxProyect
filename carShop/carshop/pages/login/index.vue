@@ -19,9 +19,23 @@ const usuario = ref({
 //FUNCIONES
 //Verficacion de usuario y contraseña
 function loginVer() {
-    if usuario.user.value === usuario.user | password.user.value === user.password
+	let findUser = false
+	usuarios.forEach((item) => {
+		if (
+			usuario.value.user == item.user &&
+			usuario.value.password == item.password
+		) {
+			findUser = true
+			return navigateTo('/catalogo')
+		}
+		console.log(usuario.user)
+	})
+	if (!findUser) {
+		alert('El usuario o contrasenia es incorrecto.')
+	}
 }
-//hacemos la funcion para mostrar o no la contraseña.
+
+// hacemos la funcion para mostrar o no la contraseña.
 function showPass() {
 	showPassword.value = !showPassword.value
 }

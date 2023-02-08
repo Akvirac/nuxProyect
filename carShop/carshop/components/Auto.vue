@@ -10,7 +10,7 @@ defineProps({
 <template>
 	<Contenedor>
 		<div>
-			<img :src="auto.img" />
+			<img :src="auto.img1" />
 		</div>
 		<div>
 			<div>
@@ -32,31 +32,6 @@ defineProps({
 				</p>
 			</div>
 		</div>
-
-		<div>
-			<p class="font-bold">Caracteristicas:</p>
-			<p>
-				<span class="text-xs font-bold">Motor: </span>
-				{{ auto.caracteristicas.motor }}
-			</p>
-			<p>
-				<span class="text-xs font-bold">Puertas: </span>
-				{{ auto.caracteristicas.puertas }}
-			</p>
-			<p>
-				<span class="text-xs font-bold">Version: </span>
-				{{ auto.caracteristicas.version }}
-			</p>
-			<p>
-				<span class="text-xs font-bold">Combustible: </span>
-				{{ auto.caracteristicas.combustible }}
-			</p>
-			<p>
-				<span class="text-xs font-bold">Transmision: </span>
-				{{ auto.caracteristicas.transmision }}
-			</p>
-		</div>
-
 		<Boton class="mt-2">Ofertar</Boton>
 	</Contenedor>
 </template>

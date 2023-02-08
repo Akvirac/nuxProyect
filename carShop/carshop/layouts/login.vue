@@ -6,10 +6,10 @@ import imagNav from '~/statics/images/ImagenNavBar.png'
 		<header class="shadow-sm bg-white">
 			<nav class="p-4 flex justify-between">
 				<ul class="flex gap-4">
-					<li><NuxtLink to="./nosotros">Nosotros</NuxtLink></li>
+					<li><NuxtLink to="./about">Nosotros</NuxtLink></li>
 				</ul>
 				<ul>
-					<li><NuxtLink>Registrarse</NuxtLink></li>
+					<li><NuxtLink to="./login/registrarse">Crear Usuario</NuxtLink></li>
 				</ul>
 			</nav>
 		</header>
