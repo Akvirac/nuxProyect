@@ -53,15 +53,9 @@ export const autos = [
 ]
 export const usuarios = [
 	{
-		user: 'arielvivian',
+		firstName: 'ariel',
+		lastName: 'vivian',
+		email: 'juanarielvivian@gmail.com',
 		password: '14511915',
-	},
-	{
-		user: 'pedropica',
-		password: 'salpica',
-	},
-	{
-		user: 'vilmapica',
-		password: 'vilma',
 	},
 ]

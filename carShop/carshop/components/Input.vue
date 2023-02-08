@@ -25,7 +25,7 @@ defineProps({
 		<div class="flex justify-center">
 			<input
 				:type="type"
-				class="border border-emerald-500"
+				class="border border-red-400"
 				:modelValue="modelValue"
 				@input="$emit('update:modelValue', $event.target.value)"
 			/>

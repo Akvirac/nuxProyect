@@ -31,7 +31,7 @@ function loginVer() {
 		console.log(usuario.user)
 	})
 	if (!findUser) {
-		alert('El usuario o contrasenia es incorrecto.')
+		alert('El usuario o contraseña es incorrecto.')
 	}
 }
 
