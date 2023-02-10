@@ -10,7 +10,7 @@ import imagNav from '~/statics/images/ImagenNavBar.png'
 						<li><NuxtLink to="./about">Nosotros</NuxtLink></li>
 					</ul>
 					<ul>
-						<li><NuxtLink to="./login/registrarse">Crear Usuario</NuxtLink></li>
+						<li><NuxtLink to="./registrarse">Crear Usuario</NuxtLink></li>
 					</ul>
 				</nav>
 			</header>

@@ -57,5 +57,6 @@ export const usuarios = [
 		lastName: 'vivian',
 		email: 'juanarielvivian@gmail.com',
 		password: '14511915',
+		id: 1,
 	},
 ]
