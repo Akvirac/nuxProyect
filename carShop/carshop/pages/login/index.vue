@@ -11,8 +11,10 @@ definePageMeta({
 //Variable para mostrar u ocultar password.
 const showPassword = ref(false)
 
+const isCreated = ref(2)
+
 const usuario = ref({
-	user: '',
+	email: '',
 	password: '',
 })
 
@@ -22,16 +24,18 @@ function loginVer() {
 	let findUser = false
 	usuarios.forEach((item) => {
 		if (
-			usuario.value.user == item.user &&
+			usuario.value.email == item.email &&
 			usuario.value.password == item.password
 		) {
 			findUser = true
-			return navigateTo('/catalogo')
+			isCreated.value = 1
+			setTimeout(() => {
+				navigateTo('/catalogo')
+			}, 2000)
 		}
-		console.log(usuario.user)
 	})
 	if (!findUser) {
-		alert('El usuario o contraseña es incorrecto.')
+		isCreated.value = 0
 	}
 }
 
@@ -43,8 +47,8 @@ function showPass() {
 
 <template>
 	<div class="flex justify-center mt-16">
-		<div class="p-4 border-2 flex flex-col items-center w-fit">
-			<Input text="Usuario" type="text" v-model="usuario.user" class="mr-7" />
+		<div class="p-4 border-2 border-red-700 flex flex-col items-center w-fit">
+			<Input text="Email" type="text" v-model="usuario.email" class="mr-7" />
 			<div>
 				<Input
 					text="Contraseña"
@@ -54,6 +58,10 @@ function showPass() {
 					@action="showPass"
 				/>
 			</div>
+			<p v-if="isCreated == 1" class="text-green-500">!Bienvenido¡</p>
+			<p v-if="isCreated == 0" class="text-red-700">
+				!Usuario y/o contraseña incorrectos¡
+			</p>
 
 			<Boton class="mt-4" @click="loginVer">Logear</Boton>
 		</div>

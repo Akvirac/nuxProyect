@@ -56,7 +56,7 @@ export const usuarios = [
 		firstName: 'ariel',
 		lastName: 'vivian',
 		email: 'juanarielvivian@gmail.com',
-		password: '14511915',
+		password: '1234',
 		id: 1,
 	},
 ]

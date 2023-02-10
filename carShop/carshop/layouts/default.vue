@@ -11,12 +11,12 @@ import imagNav from '~/statics/images/ImagenNavBar.png'
 
 						<li><NuxtLink>Propuestas</NuxtLink></li>
 
-						<li><NuxtLink>Perfil</NuxtLink></li>
+						<li><NuxtLink to="/profile">Perfil</NuxtLink></li>
 
 						<li><NuxtLink to="/about">Nosotros</NuxtLink></li>
 					</ul>
 					<ul>
-						<li><NuxtLink>Cerrar Sesion</NuxtLink></li>
+						<li><NuxtLink to="/login">Cerrar Sesion</NuxtLink></li>
 					</ul>
 				</nav>
 			</header>
