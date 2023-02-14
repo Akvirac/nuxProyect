@@ -9,8 +9,6 @@ import imagNav from '~/statics/images/ImagenNavBar.png'
 					<ul class="flex gap-4">
 						<li><NuxtLink to="/catalogo">Catalogo</NuxtLink></li>
 
-						<li><NuxtLink>Propuestas</NuxtLink></li>
-
 						<li><NuxtLink to="/profile">Perfil</NuxtLink></li>
 
 						<li><NuxtLink to="/about">Nosotros</NuxtLink></li>

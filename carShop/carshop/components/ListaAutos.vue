@@ -7,6 +7,6 @@ import { autos } from '~/data'
 	<!-- Acomodamos el template en grillas de 3 columnas. -->
 	<ul class="grid grid-cols-3 gap-4 place-items-center mx-5 mt-5">
 		<!-- Creamos el v-for que recorre a autos. -->
-		<Auto v-for="a in autos" :key="a" :auto="a" />
+		<Auto v-for="a in autos" :key="a" :auto="a" @open="$emit('open', $event)" />
 	</ul>
 </template>
