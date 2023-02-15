@@ -3,7 +3,9 @@ import { autos } from '~~/data'
 
 const propuestas = ref([])
 
-const autoSelected = ref()
+const autosSelected = ref([])
+
+const autoSelected = ref({})
 
 const isActiveTab = ref(true)
 
@@ -12,14 +14,24 @@ const isModalShow = ref(false)
 function handleOpen(auto) {
 	isModalShow.value = true
 	autoSelected.value = auto
+
 	console.log(auto)
 }
 
 function activeTab() {
-	isActiveTab.value = !isActiveTab.value
+	isActiveTab.value = true
+}
+function activeTabProp() {
+	isActiveTab.value = false
 }
 
-function handleSubmit() {}
+function handleSubmit(propuesta) {
+	propuesta.auto = autoSelected.value
+	propuestas.value.push(propuesta)
+
+	console.log(propuesta)
+	isModalShow.value = false
+}
 
 function closeModal() {
 	isModalShow.value = false
@@ -36,9 +48,9 @@ function closeModal() {
 			</li>
 		</div>
 		<li>
-			<button @click="activeTab">propuestas</button>
+			<button @click="activeTabProp">Propuestas</button>
 		</li>
 	</ul>
 	<ListaAutos v-if="isActiveTab" @open="handleOpen" />
-	<Propuestas v-else />
+	<Propuestas v-else :propuestas="propuestas" />
 </template>
