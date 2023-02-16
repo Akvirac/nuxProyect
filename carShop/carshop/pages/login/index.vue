@@ -48,7 +48,7 @@ function showPass() {
 <template>
 	<div class="flex justify-center mt-16">
 		<div class="p-4 border-2 border-red-700 flex flex-col items-center w-fit">
-			<Input text="Email" type="text" v-model="usuario.email" class="mr-7" />
+			<Input text="Email" type="text" v-model="usuario.email" />
 			<div>
 				<Input
 					text="Contraseña"

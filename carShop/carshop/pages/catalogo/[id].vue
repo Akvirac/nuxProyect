@@ -7,7 +7,6 @@ const uri = '~/data/' + id
 
 const auto = autos.find((auto) => {
 	return auto.id == id
-	console.log
 })
 </script>
 <template>

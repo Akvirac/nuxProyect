@@ -12,7 +12,12 @@ defineProps({
 </script>
 
 <template>
-	<ul>
-		<Propuesta v-for="p in propuestas" :key="p" :propuesta="p" />
+	<ul class="grid grid-cols-3 gap-4 place-items-center mx-5 mt-5">
+		<Propuesta
+			v-for="p in propuestas"
+			:key="p"
+			:propuesta="p"
+			@cancel="$emit('cancel', $event)"
+		/>
 	</ul>
 </template>

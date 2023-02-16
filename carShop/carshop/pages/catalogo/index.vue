@@ -36,6 +36,12 @@ function handleSubmit(propuesta) {
 function closeModal() {
 	isModalShow.value = false
 }
+
+function cancelOfer(propuesta) {
+	propuestas.value = propuestas.value.filter(
+		(item) => item.auto.id != propuesta.auto.id
+	)
+}
 </script>
 <template>
 	<Modal v-if="isModalShow" @submit="handleSubmit" @close="closeModal" />
@@ -52,5 +58,5 @@ function closeModal() {
 		</li>
 	</ul>
 	<ListaAutos v-if="isActiveTab" @open="handleOpen" />
-	<Propuestas v-else :propuestas="propuestas" />
+	<Propuestas v-else :propuestas="propuestas" @cancel="cancelOfer" />
 </template>
